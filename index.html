@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Jesus? &amp; Healthy Christian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- 언어 전환 버튼 -->
+    <button id="lang-toggle" class="lang-toggle-btn" onclick="toggleLanguage()">ENG</button>
+
+    <div class="container">
+        <!-- 상단 네비게이션 -->
+        <nav class="nav-tabs" role="tablist">
+            <a href="#page1" class="nav-tab active" role="tab" aria-selected="true" onclick="showPage('page1', this)">Who's Jesus</a>
+            <a href="#page2" class="nav-tab" role="tab" aria-selected="false" onclick="showPage('page2', this)">Healthy Christian</a>
+        </nav>
+
+        <!-- =================== 페이지 1: 예수, 누구신가? =================== -->
+        <section id="page1" class="page-section active" role="tabpanel">
+            <h1>
+                <span class="lang-ko">예수, 누구신가?</span>
+                <span class="lang-en">Who is Jesus?</span>
+                <br><span style="font-size:0.6em; color: var(--text-muted); font-family: var(--font-main);">
+                    <span class="lang-ko">Who's Jesus?</span>
+                    <span class="lang-en">예수, 누구신가?</span>
+                </span>
+            </h1>
+
+            <!-- 섹션 1: 창조 -->
+            <div class="section-card" style="animation-delay: 0.1s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">우주의 창조자</span>
+                    <span class="lang-en">Creator of the Universe</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">창 1:1-2,27</span>
+                        <span class="lang-en">Genesis 1:1-2, 27</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">태초에 하나님이 천지를 창조하시니라... 하나님이 자기 형상 곧 하나님의 형상대로 사람을 창조하시되 남자와 여자를 창조하시고</span>
+                        <span class="lang-en">In the beginning God created the heavens and the earth... So God created mankind in his own image, in the image of God he created them; male and female he created them.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">요 1:3</span>
+                        <span class="lang-en">John 1:3</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">만물이 그로 말미암아 지은 바 되었으니 지은 것이 하나도 그가 없이는 된 것이 없느니라</span>
+                        <span class="lang-en">Through him all things were made; without him nothing was made that has been made.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 2: 옛 언약 -->
+            <div class="section-card" style="animation-delay: 0.2s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+                <h2>
+                    <span class="lang-ko">옛 언약</span>
+                    <span class="lang-en">The Old Covenant</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">출애굽기 19:5-6</span>
+                        <span class="lang-en">Exodus 19:5-6</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">세계가 다 내게 속하였나니 너희가 내 말을 잘 듣고 내 언약을 지키면 너희는 모든 민족 중에서 내 소유가 되겠고 너희가 내게 대하여 제사장 나라가 되며 거룩한 백성이 되리라</span>
+                        <span class="lang-en">Now if you obey me fully and keep my covenant, then out of all nations you will be my treasured possession. Although the whole earth is mine, you will be for me a kingdom of priests and a holy nation.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">출애굽기 24:7-8</span>
+                        <span class="lang-en">Exodus 24:7-8</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">언약서를 가져다가 백서에게 낭독하여 듣게 하니 그들이 이르되 여호와의 모든 말씀을 우리가 준행하리이다... 이는 여호와께서 이 모든 말씀에 대하여 너희와 세우신 언약의 피니라</span>
+                        <span class="lang-en">Then he took the Book of the Covenant and read it to the people. They responded, "We will do everything the Lord has said; we will obey."... "This is the blood of the covenant that the Lord has made with you in accordance with all these words."</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 3: 창조자를 떠난 인간 -->
+            <div class="section-card" style="animation-delay: 0.3s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">창조자를 떠난 인간</span>
+                    <span class="lang-en">Humanity Separated from the Creator</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">이사야 59:1-2</span>
+                        <span class="lang-en">Isaiah 59:1-2</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">여호와의 손이 짧아 구원하지 못하심도 아니요 귀가 둔하여 듣지 못하심도 아니라 오직 너희 죄악이 너희와 하나님 사이를 갈라 놓았고...</span>
+                        <span class="lang-en">Surely the arm of the Lord is not too short to save, nor his ear too dull to hear. But your iniquities have separated you from your God...</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">에베소서 2:2-3</span>
+                        <span class="lang-en">Ephesians 2:2-3</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">그 때에 너희가 그 가운데서 행하여 이 세상 풍조를 따르고 공중의 권세 잡은 자를 따랐으니...</span>
+                        <span class="lang-en">In which you used to live when you followed the ways of this world and of the ruler of the kingdom of the air...</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 4: 새 언약 -->
+            <div class="section-card" style="animation-delay: 0.4s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">새 언약</span>
+                    <span class="lang-en">The New Covenant</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">예레미야 31:31-33</span>
+                        <span class="lang-en">Jeremiah 31:31-33</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">보라 날이 이르니니 내가 이스라엘 집과 유다 집에 새 언약을 맺으리라... 내가 나의 법을 그들의 속에 두며 그들의 마음에 기록하여...</span>
+                        <span class="lang-en">"The days are coming," declares the Lord, "when I will make a new covenant with the people of Israel and with the people of Judah... I will put my law in their minds and write it on their hearts."</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">마태복음 26:26-28</span>
+                        <span class="lang-en">Matthew 26:26-28</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">이것은 죄 사함을 얻게 하려고 많은 사람을 위하여 흘리는 바 나의 피 곧 언약의 피니라</span>
+                        <span class="lang-en">This is my blood of the covenant, which is poured out for many for the forgiveness of sins.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 5: 예수, 언약의 성취 -->
+            <div class="section-card" style="animation-delay: 0.5s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">예수, 언약의 성취</span>
+                    <span class="lang-en">Jesus, Fulfillment of the Covenant</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">요 3:16</span>
+                        <span class="lang-en">John 3:16</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 저를 믿는 자마다 멸망치 않고 영생을 얻게하려 하심이라</span>
+                        <span class="lang-en">For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">롬 3:23-24</span>
+                        <span class="lang-en">Romans 3:23-24</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니 그리스도 예수 안에 있는 속량으로 말미암아 하나님의 은혜로 값 없이 의롭다 하심을 얻은 자 되었느니라.</span>
+                        <span class="lang-en">For all have sinned and fall short of the glory of God, and all are justified freely by his grace through the redemption that came by Christ Jesus.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 6: 다시, 하나님과 화목 -->
+            <div class="section-card" style="animation-delay: 0.6s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">다시, 하나님과 화목</span>
+                    <span class="lang-en">Reconciled with God Again</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">요한복음 1:12-13</span>
+                        <span class="lang-en">John 1:12-13</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">영접하는 자 곧 그 이름을 믿는 자들에게는 하나님의 자녀가 되는 권세를 주셨으니...</span>
+                        <span class="lang-en">Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God...</span>
+                    </p>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">롬 5:1</span>
+                        <span class="lang-en">Romans 5:1</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">그러므로 우리가 믿음으로 의홉다 하심을 받았으니 우리 주 예수 그리스도로 말미암아 하나님과 화평을 누리자</span>
+                        <span class="lang-en">Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">요한1서 5:4-5</span>
+                        <span class="lang-en">1 John 5:4-5</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">무릇 하나님께로부터 난 자마다 세상을 이긴니라 세상을 이기는 승리는 이것이니 우리의 믿음이니라</span>
+                        <span class="lang-en">For everyone born of God overcomes the world. This is the victory that has overcome the world, even our faith.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 7: 정리 -->
+            <div class="section-card" style="animation-delay: 0.7s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+
+                <div class="lang-ko">
+                    <h3>창조주 이셨던 예수가</h3>
+                    <h3>나의 죄를 대속 하기 위해</h3>
+                    <h3>십자가에서 피흘려 죽으셨음과</h3>
+                    <h3>삼일 만에 죽은자 가운데서</h3>
+                    <h3>다시 살아나신 사실을 받아들임으로</h3>
+                    <h3>하나님의 자녀로 태어난다.</h3>
+                </div>
+                <div class="lang-en">
+                    <h3>Jesus, who was the Creator,</h3>
+                    <h3>to atone for my sins,</h3>
+                    <h3>shed His blood and died on the cross,</h3>
+                    <h3>and on the third day,</h3>
+                    <h3>by accepting the fact that He rose from the dead,</h3>
+                    <h3>we are born as children of God.</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== 페이지 2: 건강한 그리스도인 =================== -->
+        <section id="page2" class="page-section" role="tabpanel">
+            <h1>
+                <span class="lang-ko">건강한 그리스도인</span>
+                <span class="lang-en">Healthy Christian</span>
+                <br><span style="font-size:0.6em; color: var(--text-muted); font-family: var(--font-main);">
+                    <span class="lang-ko">Healthy Christian</span>
+                    <span class="lang-en">건강한 그리스도인</span>
+                </span>
+            </h1>
+            <p style="text-align: center; margin-bottom: 2.5rem; color: var(--text-muted);">Inspiring everyday living</p>
+
+            <!-- 섹션 1: 기도 -->
+            <div class="section-card" style="animation-delay: 0.1s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">하나님 앞에 무릎 꿇고 기도하라 !</span>
+                    <span class="lang-en">Kneel Before God and Pray!</span>
+                </h2>
+                <p class="content-text">
+                    <span class="lang-ko">하나님 아버지, 저는 죄인입니다. 저의 죄를 뉘우치고 돌이키기 원하며 새 삶을 살고싶습니다.
+예수께서 저의 죄를 대신하여 죽으시고 부활하신 것을 믿고 감사드립니다.
+이 시간에 마음을 열고 예수님을 제 인생의 주님으로 영접합니다...
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">(사도행전 1:14, 2:42)</span></span>
+                    <span class="lang-en">Heavenly Father, I am a sinner. I want to repent and turn from my sins and live a new life.
+I believe and give thanks that Jesus died for my sins and rose again.
+At this moment, I open my heart and receive Jesus as the Lord of my life...
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">(Acts 1:14, 2:42)</span></span>
+                </p>
+            </div>
+
+            <!-- 섹션 2: 성경 -->
+            <div class="section-card" style="animation-delay: 0.2s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">성경, 하나님의 말씀을 따라 살아라!</span>
+                    <span class="lang-en">Live by the Scripture, the Word of God!</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">딤후 3:16-17</span>
+                        <span class="lang-en">2 Timothy 3:16-17</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니...</span>
+                        <span class="lang-en">All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness...</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">히 4:12</span>
+                        <span class="lang-en">Hebrews 4:12</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">하나님의 말씀은 살아 있고 활력이 있어 좌우에 날선 어떤 검보다도 예리하여...</span>
+                        <span class="lang-en">For the word of God is alive and active. Sharper than any double-edged sword...</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 3: 성령 -->
+            <div class="section-card" style="animation-delay: 0.3s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">성령을 받으라 !</span>
+                    <span class="lang-en">Receive the Holy Spirit!</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">사도행전 1:5</span>
+                        <span class="lang-en">Acts 1:5</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">요한은 물로 세례를 베풀었으나 너희는 몇 날이 못되어 성령으로 세례를 받으리라</span>
+                        <span class="lang-en">For John baptized with water, but in a few days you will be baptized with the Holy Spirit.</span>
+                    </p>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">사도행전 2:38</span>
+                        <span class="lang-en">Acts 2:38</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">너희가 회개하여 각각 예수 그리스도 이름으로 세례를 받고 죄 사함을 받으라 그리하면 성령의 선물을 받으리니</span>
+                        <span class="lang-en">Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">요한복음 14:16-17</span>
+                        <span class="lang-en">John 14:16-17</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">내가 아버지께 구하겠으니 그가 또 다른 보혜사를 너희에게 주사 영원토록 너희와 함께 있게 하리니...</span>
+                        <span class="lang-en">And I will ask the Father, and he will give you another advocate to help you and be with you forever...</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 4: 교회 -->
+            <div class="section-card" style="animation-delay: 0.4s;">
+                <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></div>
+                <h2>
+                    <span class="lang-ko">교회에 등록하라</span>
+                    <span class="lang-en">Register at a Church</span>
+                </h2>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">사도행전 2:46-47</span>
+                        <span class="lang-en">Acts 2:46-47</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">날마나 마음을 같이 하여 모이기를 힘쓰고 집에서 떡을 떼며 기쁨과 순전한 마음으로 음식을 먹고...</span>
+                        <span class="lang-en">Every day they continued to meet together with one accord, breaking bread in their homes and eating together with glad and sincere hearts...</span>
+                    </p>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="verse-ref">
+                        <span class="lang-ko">히브리서 10:25</span>
+                        <span class="lang-en">Hebrews 10:25</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">모이기를 페하는 어떤 사람들의 습관과 같이하지말고 오직 권하여 그 날이 가까움을 볼수록 더욱 그리하자</span>
+                        <span class="lang-en">Not giving up meeting together, as some are in the habit of doing, but encouraging one another — and all the more as you see the Day approaching.</span>
+                    </p>
+                </div>
+                <div>
+                    <span class="verse-ref">
+                        <span class="lang-ko">고린도전서 12:27</span>
+                        <span class="lang-en">1 Corinthians 12:27</span>
+                    </span>
+                    <p class="content-text">
+                        <span class="lang-ko">너희는 그리스도의 몸이요 지체의 각 부분이라</span>
+                        <span class="lang-en">Now you are the body of Christ, and each one of you is a part of it.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 섹션 5: 교회 진단 -->
+            <div class="section-card" style="animation-delay: 0.5s; border-left-color: #fff; border-left: none; border-top: 4px solid var(--accent-color);">
+                <h2 style="border: none; text-align: center;">
+                    <span class="lang-ko">교회를 진단하라</span>
+                    <span class="lang-en">Diagnose Your Church</span>
+                </h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <h3 style="color: var(--accent-color); font-size: 1rem; margin-bottom: 0.5rem;">
+                            <span class="lang-ko">건강한 교회 특징</span>
+                            <span class="lang-en">Healthy Church</span>
+                        </h3>
+                        <ul class="diagnosis-list">
+                            <li>
+                                <span class="lang-ko">성경을 하나님 말씀으로 믿고 배우고 가르치는 교회</span>
+                                <span class="lang-en">A church that believes, learns, and teaches the Bible as the Word of God</span>
+                            </li>
+                            <li>
+                                <span class="lang-ko">성령의 인도하심을 간구하는 교회</span>
+                                <span class="lang-en">A church that seeks the guidance of the Holy Spirit</span>
+                            </li>
+                            <li>
+                                <span class="lang-ko">세상을 선교하기 위해 존재하는 교회</span>
+                                <span class="lang-en">A church that exists to evangelize the world</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: #ff6b6b; font-size: 1rem; margin-bottom: 0.5rem;">
+                            <span class="lang-ko">병든 교회 특징</span>
+                            <span class="lang-en">Sick Church</span>
+                        </h3>
+                        <ul class="diagnosis-list sick-church">
+                            <li>
+                                <span class="lang-ko">전통과 유전을 성경보다 중요시하는 교회</span>
+                                <span class="lang-en">A church that values tradition over Scripture</span>
+                            </li>
+                            <li>
+                                <span class="lang-ko">목사가 권위적이고 제도적인 교회</span>
+                                <span class="lang-en">A church where the pastor is authoritarian and institutional</span>
+                            </li>
+                            <li>
+                                <span class="lang-ko">선교보다 예배 참여를 더 강조하는 교회</span>
+                                <span class="lang-en">A church that emphasizes attendance over mission</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="section-card" style="background: transparent; border: 1px solid var(--accent-color); text-align: center; animation-delay: 0.6s;">
+                <h2>Let's connect</h2>
+                <p class="content-text" style="color: var(--text-main);">
+                    <strong>Phone</strong><br>
+                    020 - 4034 - 6412
+                </p>
+                <p class="content-text" style="margin-top: 1rem; color: var(--text-main);">
+                    <strong>Email</strong><br>
+                    dxshen1003@gmail.com
+                </p>
+                <p class="content-text" style="margin-top: 1rem;">
+                    <strong>Social media</strong>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
