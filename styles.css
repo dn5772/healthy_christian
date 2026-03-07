@@ -87,19 +87,23 @@ h1 { font-size: 2rem; text-align: center; margin-bottom: 2rem; }
 h2 { font-size: 1.4rem; border-bottom: 1px solid rgba(201, 169, 98, 0.3); padding-bottom: 0.5rem; }
 h3 { font-size: 1.2rem; color: var(--accent-color); font-family: var(--font-main); font-weight: 700; }
 
+.text-container {
+	margin-bottom: 1.5rem;
+}
+
 .verse-ref {
     color: var(--accent-color);
     font-weight: 700;
     font-size: 0.9rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     opacity: 0.9;
 }
 
 .content-text {
     color: var(--text-sub);
     font-size: 0.95rem;
-    white-space: pre-line;
+    /* white-space: normal; */
 }
 
 /* 5. 내비게이션 탭 */
@@ -153,6 +157,19 @@ h3 { font-size: 1.2rem; color: var(--accent-color); font-family: var(--font-main
     height: 20px;
     fill: var(--accent-color);
 }
+
+/* KakaoTalk 링크 스타일 */
+.kakao-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+.kakao-link svg { width: 18px; height: 18px; fill: var(--accent-color); }
+.kakao-link:hover { opacity: 0.9; text-decoration: underline; }
 
 /* 7. 진단 리스트 */
 .diagnosis-list {
