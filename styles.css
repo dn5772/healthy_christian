@@ -222,29 +222,48 @@ h3 { font-size: 1.2rem; color: var(--accent-color); font-family: var(--font-main
 }
 
 /* 9. 언어 토글 버튼 */
-.lang-toggle-btn {
+.lang-toggle-group {
     position: fixed;
     top: 1rem;
     left: 1rem;
     z-index: 1000;
+    display: flex;
+    gap: 0.35rem;
     background: rgba(28, 33, 40, 0.9);
     border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 0.4rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+    padding: 0.25rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
+.lang-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: var(--font-main);
+    line-height: 1;
+}
+
 .lang-toggle-btn:hover {
+    background: rgba(201, 169, 98, 0.15);
+}
+
+.lang-toggle-btn.active {
     background: var(--accent-color);
     color: var(--bg-color);
 }
 
 /* 10. 언어 전환 */
-html[lang="ko"] .lang-en { display: none; }
-html[lang="en"] .lang-ko { display: none; }
+html[lang="ko"] .lang-en,
+html[lang="ko"] .lang-zh { display: none; }
+html[lang="en"] .lang-ko,
+html[lang="en"] .lang-zh { display: none; }
+html[lang="zh"] .lang-ko,
+html[lang="zh"] .lang-en { display: none; }

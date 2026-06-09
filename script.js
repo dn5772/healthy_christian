@@ -26,26 +26,27 @@ function showPage(pageId, element) {
 }
 
 // ========== 언어 전환 ==========
+var SUPPORTED_LANGS = ['ko', 'en', 'zh'];
+
 function setLanguage(lang) {
+    if (SUPPORTED_LANGS.indexOf(lang) === -1) {
+        lang = 'ko';
+    }
     document.documentElement.lang = lang;
     localStorage.setItem('preferredLang', lang);
 
-    // 버튼 텍스트 업데이트
-    var btn = document.getElementById('lang-toggle');
-    if (btn) {
-        btn.textContent = lang === 'ko' ? 'ENG' : '한';
-    }
+    // 활성 버튼 표시
+    document.querySelectorAll('.lang-toggle-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+        } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+        }
+    });
 
-    // 타이틀 업데이트
-    document.title = lang === 'ko'
-        ? "Who's Jesus? & Healthy Christian"
-        : "Who's Jesus? & Healthy Christian";
-}
-
-function toggleLanguage() {
-    var currentLang = document.documentElement.lang || 'ko';
-    var newLang = currentLang === 'ko' ? 'en' : 'ko';
-    setLanguage(newLang);
+    document.title = "Who's Jesus? & Healthy Christian";
 }
 
 // ========== 초기화 ==========
@@ -58,7 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         // 2. 브라우저 언어 감지
         var browserLang = navigator.language || navigator.userLanguage || 'ko';
-        var lang = browserLang.startsWith('ko') ? 'ko' : 'en';
+        var lang;
+        if (browserLang.startsWith('ko')) {
+            lang = 'ko';
+        } else if (browserLang.startsWith('zh')) {
+            lang = 'zh';
+        } else {
+            lang = 'en';
+        }
         setLanguage(lang);
     }
 });
