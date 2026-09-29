@@ -1,29 +1,25 @@
 // ========== 페이지 전환 ==========
-function showPage(pageId, element) {
-    document.querySelectorAll('.page-section').forEach(function(page) {
-        page.classList.remove('active');
+var PAGES = ['page1', 'page2', 'page3'];
+
+function showPage(pageId) {
+    if (PAGES.indexOf(pageId) === -1) {
+        pageId = 'page1';
+    }
+
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.toggle('active', page.id === pageId);
     });
 
-    document.querySelectorAll('.nav-tab').forEach(function(tab) {
-        tab.classList.remove('active');
-        tab.setAttribute('aria-selected', 'false');
+    document.querySelectorAll('.tab').forEach(function(tab) {
+        tab.setAttribute('aria-selected', tab.getAttribute('data-page') === pageId ? 'true' : 'false');
     });
 
-    document.getElementById(pageId).classList.add('active');
-
-    element.classList.add('active');
-    element.setAttribute('aria-selected', 'true');
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // 애니메이션 재실행
-    var cards = document.querySelectorAll('#' + pageId + ' .section-card');
-    cards.forEach(function(card) {
-        card.style.animation = 'none';
-        void card.offsetWidth;
-        card.style.animation = null;
-    });
+    window.scrollTo({ top: 0 });
 }
+
+window.addEventListener('hashchange', function() {
+    showPage(location.hash.slice(1));
+});
 
 // ========== 언어 전환 ==========
 var SUPPORTED_LANGS = ['ko', 'en', 'zh'];
@@ -33,26 +29,21 @@ function setLanguage(lang) {
         lang = 'ko';
     }
     document.documentElement.lang = lang;
-    localStorage.setItem('preferredLang', lang);
+    try { localStorage.setItem('preferredLang', lang); } catch (e) {}
 
     // 활성 버튼 표시
-    document.querySelectorAll('.lang-toggle-btn').forEach(function(btn) {
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-            btn.setAttribute('aria-pressed', 'true');
-        } else {
-            btn.classList.remove('active');
-            btn.setAttribute('aria-pressed', 'false');
-        }
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        var active = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-
-    document.title = "Who's Jesus? & Healthy Christian";
 }
 
 // ========== 초기화 ==========
 document.addEventListener('DOMContentLoaded', function() {
     // 1. 저장된 언어 설정 확인
-    var savedLang = localStorage.getItem('preferredLang');
+    var savedLang = null;
+    try { savedLang = localStorage.getItem('preferredLang'); } catch (e) {}
 
     if (savedLang) {
         setLanguage(savedLang);
@@ -69,4 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         setLanguage(lang);
     }
+
+    // 3. 주소의 #page 로 시작 탭 결정
+    showPage(location.hash.slice(1));
 });
