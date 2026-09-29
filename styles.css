@@ -3,7 +3,7 @@
     --mist: #EEF1EF;      /* 배경 */
     --ink: #17212B;       /* 본문 */
     --ink-soft: #515C66;  /* 보조 글 */
-    --indigo: #2A4A8C;    /* 쪽빛 강조 */
+    --indigo: #395781;    /* 로고 색 (강조) */
     --line: #C5CEC9;      /* 선 */
     --dawn: #F1DDB0;      /* 기쁜 소식 */
     --brick: #9A4535;     /* 병든 교회 표시 */
@@ -73,7 +73,7 @@ a:focus-visible, button:focus-visible {
     font-size: 0.95rem;
     letter-spacing: -0.01em;
 }
-.brand-mark { width: 26px; height: 16px; fill: none; stroke: var(--indigo); stroke-width: 2.2; }
+.brand-mark { flex: none; width: 26px; height: 26px; color: var(--indigo); }
 
 .lang-switch { display: flex; gap: 0.15rem; }
 .lang-btn {
@@ -125,45 +125,34 @@ a:focus-visible, button:focus-visible {
 .page { display: none; scroll-margin-top: 10rem; }
 .page.active { display: block; }
 
-/* 히어로: 다리 아치 */
+/* 히어로: 로고 */
 .hero { padding: 2.5rem 0 3rem; }
 
-.arch {
+.logo {
     display: block;
-    width: 100%;
+    width: clamp(8.5rem, 34vw, 11rem);
     height: auto;
     margin-bottom: 1.75rem;
-    overflow: visible;
+    color: var(--indigo);
 }
-.arch path, .arch line { fill: none; stroke: var(--indigo); }
-.arch .arch-curve { stroke-width: 2.5; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.arch .arch-deck { stroke-width: 2.5; }
-.arch .arch-hangers line { stroke-width: 1; opacity: 0.5; }
+.logo-lockup { width: clamp(10.5rem, 44vw, 12rem); }
 
-/* 페이지가 열릴 때 한 번: 아치를 긋고, 줄이 차례로 내려온다 */
-.page.active .arch-curve { animation: drawArch 1.2s cubic-bezier(.6, 0, .2, 1) both; }
-.page.active .arch-hangers line {
-    transform-box: fill-box;
-    transform-origin: 50% 100%;
-    animation: hang 0.45s ease-out both;
+/* 탭을 처음 열 때 한 번: 왼쪽 위 점에서 두 길로 갈라져 두 점을 잇고, 오른쪽 아래 점에서 다시 만난다 */
+.logo.is-drawing .ink {
+    stroke-dasharray: 1;
+    animation: logo-ink var(--d) linear var(--t) both;
 }
-.page.active .arch-hangers line:nth-child(1) { animation-delay: 0.35s; }
-.page.active .arch-hangers line:nth-child(2) { animation-delay: 0.45s; }
-.page.active .arch-hangers line:nth-child(3) { animation-delay: 0.55s; }
-.page.active .arch-hangers line:nth-child(4) { animation-delay: 0.65s; }
-.page.active .arch-hangers line:nth-child(5) { animation-delay: 0.75s; }
-.page.active .arch-hangers line:nth-child(6) { animation-delay: 0.85s; }
-.page.active .arch-hangers line:nth-child(7) { animation-delay: 0.95s; }
-.page.active .arch-hangers line:nth-child(8) { animation-delay: 1.05s; }
-.page.active .arch-hangers line:nth-child(9) { animation-delay: 1.15s; }
+.logo.is-drawing .ink.in { animation-timing-function: cubic-bezier(.5, 0, 1, 1); }
+.logo.is-drawing .ink.out { animation-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.logo.is-drawing .word { animation: logo-fade var(--d) ease-out var(--t) both; }
 
-@keyframes drawArch {
+@keyframes logo-ink {
     from { stroke-dashoffset: 1; }
     to { stroke-dashoffset: 0; }
 }
-@keyframes hang {
-    from { transform: scaleY(0); }
-    to { transform: scaleY(1); }
+@keyframes logo-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 h1 {
@@ -380,14 +369,15 @@ h2 {
     color: #FFFFFF;
     font-weight: 600;
     text-underline-offset: 4px;
-    text-decoration-color: #6F87C4;
+    text-decoration-color: #92A3BA;
 }
 .contact a:focus-visible { outline-color: var(--dawn); }
 
 /* 9. 모션 줄이기 */
 @media (prefers-reduced-motion: reduce) {
-    .page.active .arch-curve,
-    .page.active .arch-hangers line { animation: none; }
+    .logo.is-drawing .ink,
+    .logo.is-drawing .word { animation: none; }
+    .logo.is-drawing { animation: logo-fade 0.5s ease-out both; }
 }
 
 /* 10. 언어 전환 */

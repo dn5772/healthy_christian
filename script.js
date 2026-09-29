@@ -63,4 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. 주소의 #page 로 시작 탭 결정
     showPage(location.hash.slice(1));
+
+    // 4. 로고는 탭마다 처음 열 때 한 번만 그린다 (중간에 탭을 옮기면 다음에 다시 그림)
+    document.querySelectorAll('.logo.is-drawing').forEach(function(logo) {
+        logo.addEventListener('animationend', function(e) {
+            if (e.target === logo || e.target.classList.contains('last')) {
+                logo.classList.remove('is-drawing');
+            }
+        });
+    });
 });
